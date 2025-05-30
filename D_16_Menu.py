@@ -23,12 +23,13 @@ class Menu:
       """Returns all the names of the available menu items"""
       options = ""
       for item in self.menu:
-          options += f"{item.name}/"
-      return options
+          options += f"{item.name}/" # / is used to separate the items
+      return options # we got collected all the items in the options variable as a string
 
   def find_drink(self, order_name):
       """Searches the menu for a particular drink by name. Returns that item if it exists, otherwise returns None"""
       for item in self.menu:
-          if item.name == order_name:
-              return item
+          if item.name == order_name: #order name passed here is the choice variable
+              return item # it returns the item object 
+                            #that has dictionary of ingredients and cost inside 
       print("Sorry that item is not available.")

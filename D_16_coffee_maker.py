@@ -24,6 +24,9 @@ class CoffeeMaker:
 
   def make_coffee(self, order):
       """Deducts the required ingredients from the resources."""
+      # it gets item object variable with ingredients inside
       for item in order.ingredients:
           self.resources[item] -= order.ingredients[item]
+          # dict atributes are deducted by the ingredients of the order
+          # that also has the same order of attributes 
       print(f"Here is your {order.name} ☕️. Enjoy!")
